@@ -15,5 +15,6 @@ describe('', () => {
         cy.visit('https://petstore.octoperf.com/actions/Catalog.action')
         cy.wait(4000)
         cy.get('#QuickLinks > a:nth-child(1) > img').click()
+        cy.get('#Catalog > h2').should('have.text', 'Fish')
     })
 });
